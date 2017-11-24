@@ -14,13 +14,13 @@ defmodule ExOpenpay.CustomerTest do
     {:ok, [params: params]}
   end
 
-  # test "Create", %{params: params} do
-  #   use_cassette "customer_test/create" do
-  #     case ExOpenpay.Customers.create(params) do
-  #       {:ok, res} -> assert res.creation_date
-  #       {:error, err} -> flunk Map.get(err, "description")
-  #     end
-  #   end
-  # end
+  test "Create", %{params: params} do
+    use_cassette "customer_test/create" do
+      case ExOpenpay.Customers.create(params) do
+        {:ok, res} -> assert res.creation_date
+        {:error, err} -> flunk Map.get(err, "description")
+      end
+    end
+  end
 
 end

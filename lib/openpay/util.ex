@@ -27,7 +27,7 @@ defmodule ExOpenpay.Util do
   def handle_openpay_response(res) do
     cond do
       res["error_code"] -> {:error, res}
-      res["description"] -> {:ok, Enum.map(res["data"], &ExOpenpay.Util.string_map_to_atoms &1)}
+      # res["description"] -> {:ok, Enum.map(res["data"], &ExOpenpay.Util.string_map_to_atoms &1)}
       true -> {:ok, ExOpenpay.Util.string_map_to_atoms res}
     end
   end
