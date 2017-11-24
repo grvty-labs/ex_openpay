@@ -1,4 +1,4 @@
-# Openpay for Elixir [![Build Status](https://travis-ci.org/grvty-labs/openpay.svg?branch=master)](https://travis-ci.org/grvty-labs/openpay) [![Hex.pm](https://img.shields.io/hexpm/v/stripity_openpay.svg?maxAge=2592000)](https://hex.pm/packages/stripity_openpay) [![Hex Docs](https://img.shields.io/badge/hex-docs-9768d1.svg)](https://hexdocs.pm/stripity_openpay) [![Hex.pm](https://img.shields.io/hexpm/dt/stripity_openpay.svg?maxAge=2592000)](https://hex.pm/packages/stripity_openpay) [![Inline docs](http://inch-ci.org/github/grvty-labs/openpay.svg)](http://inch-ci.org/github/grvty-labs/openpay) [![Coverage Status](https://coveralls.io/repos/github/grvty-labs/openpay/badge.svg?branch=master)](https://coveralls.io/github/grvty-labs/openpay?branch=master)
+# Openpay for Elixir [![Build Status](https://travis-ci.org/grvty-labs/openpay.svg?branch=master)](https://travis-ci.org/grvty-labs/openpay) [![Hex.pm](https://img.shields.io/hexpm/v/stripity_openpay.svg?maxAge=2592000)](https://hex.pm/packages/stripity_openpay) [![Hex Docs](https://img.shields.io/badge/hex-docs-9768d1.svg)](https://hexdocs.pm/stripity_openpay) [![Hex.pm](https://img.shields.io/hexpm/dt/stripity_openpay.svg?maxAge=2592000)](https://hex.pm/packages/stripity_openpay) [![Coverage Status](https://coveralls.io/repos/github/grvty-labs/openpay/badge.svg?branch=master)](https://coveralls.io/github/grvty-labs/openpay?branch=master)
 
 An Elixir library for working with [Openpay](http://openpay.mx/).
 
@@ -61,6 +61,9 @@ In general, if Openpay requires some information for a given API call, you'll fi
 {:ok, result} = Openpay.Customers.delete "some_id"
 ```
 
+## Authors
+
+* Yamil Díaz Aguirre (<yamilquery@gmail.com>)
 
 ## Contributing
 
