@@ -31,7 +31,7 @@ defmodule ExOpenpay.Customers do
         email: "customer_email@me.com",
         phone_number: "",
         # address: "",
-        external_id: ""
+        # external_id: ""
       ]
 
       {:ok, customer} = ExOpenpay.Customers.create(params)
@@ -65,7 +65,7 @@ defmodule ExOpenpay.Customers do
    Gets a customer for given owner using customer ID.
    Returns a `{:ok, customer}` tuple.
    ## Examples
-       {:ok, customer} = ExOpenpay.Customers.get(:customer, customer_id, customer_id)
+       {:ok, customer} = ExOpenpay.Customers.get(customer_id)
    """
    def get(id) do
      get id, ExOpenpay.config_or_env_key
@@ -76,7 +76,7 @@ defmodule ExOpenpay.Customers do
    Gets a customer for given owner using customer ID.
    Returns a `{:ok, customer}` tuple.
    ## Examples
-       {:ok, customer} = ExOpenpay.Customers.get(:customer, customer_id, customer_id, key)
+       {:ok, customer} = ExOpenpay.Customers.get(customer_id, key)
    """
    def get(id, key) do
      ExOpenpay.make_request_with_key(:get, "#{@endpoint}/#{id}", key)

@@ -23,25 +23,20 @@ defmodule ExOpenpay.Cards do
   @doc """
  Create a card.
  Creates a card for given owner type, owner ID using params.
- `params` must contain a "source" object. Inside the "source" object, the following parameters are required:
    * object,
    * number,
-   * cvs,
-   * exp_month,
-   * exp_year.
+   * cvv2,
+   * expiration_month,
+   * expiration_year.
  Returns a `{:ok, card}` tuple.
  ## Examples
      params = [
-       source: [
-         object: "card",
-         number: "4111111111111111",
-         cvc: 123,
-         exp_month: 12,
-         exp_year: 2020,
-         metadata: [
-           test_field: "test val"
-         ]
-       ]
+       card_number: "4111111111111111",
+       holder_name: "Juan Perez Ramirez",
+       expiration_year: "20",
+       expiration_month: "12",
+       cvv2: "110"
+       # device_session_id: "",
      ]
      {:ok, card} = ExOpenpay.Cards.create(:customer, customer_id, params)
  """
@@ -52,12 +47,11 @@ defmodule ExOpenpay.Cards do
  @doc """
  Create a card. Accepts ExOpenpay API key.
  Creates a card for given owner using params.
- `params` must contain a "source" object. Inside the "source" object, the following parameters are required:
    * object,
    * number,
-   * cvs,
-   * exp_month,
-   * exp_year.
+   * cvv2,
+   * expiration_month,
+   * expiration_year.
  Returns a `{:ok, card}` tuple.
  ## Examples
      {:ok, card} = ExOpenpay.Cards.create(:customer, customer_id, params, key)

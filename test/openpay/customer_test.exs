@@ -28,15 +28,6 @@ defmodule ExOpenpay.CustomerTest do
     end
   end
 
-  # test "Create", %{params: params} do
-  #   use_cassette "customer_test/create" do
-  #     case ExOpenpay.Customers.create(params) do
-  #       {:ok, res} -> assert res.creation_date
-  #       {:error, err} -> flunk Map.get(err, "description")
-  #     end
-  #   end
-  # end
-
   @tag disabled: false
   test "Create", %{customer: customer}  do
     assert customer.name == "Yamil"
