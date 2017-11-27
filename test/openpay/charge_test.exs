@@ -39,12 +39,13 @@ defmodule ExOpenpay.ChargeTest do
                  amount: 100,
                  currency: "MXN",
                  description: "Cargo inicial a mi cuenta",
-                 order_id: "grv-00001",
+                #  order_id: "grvty-00004",
                  device_session_id: "kR1MiQhz2otdIuUlQkbEyitIqVMiI16f",
               ]
               on_exit fn ->
                 use_cassette "charge_test/teardown2", match_requests_on: [:query, :request_body] do
                   ExOpenpay.Cards.delete :customer, customer.id, card.id
+                  ExOpenpay.Cards.delete :customer, customer.id, card2.id
                 end
               end
             {:ok, [customer: customer, card: card, card2: card2, new_charge: new_charge]}
@@ -56,6 +57,7 @@ defmodule ExOpenpay.ChargeTest do
     end
   end
 
+  @tag disabled: false
   test "With Card ID or Token", %{customer: customer, new_charge: new_charge}  do
     use_cassette "charge_test/create_with_card_id" do
       case ExOpenpay.Charges.create(customer.id, new_charge) do
