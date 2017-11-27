@@ -1,0 +1,38 @@
+[
+  {
+    "request": {
+      "body": "{\"source_id\":\"kjxrvlpa6owf8wdj2exr\",\"method\":\"card\",\"device_session_id\":\"kR1MiQhz2otdIuUlQkbEyitIqVMiI16f\",\"description\":\"Cargo inicial a mi cuenta\",\"currency\":\"MXN\",\"amount\":100}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/aiq8viq0qdnehyjfld5h/charges"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":\"trgkx77s9kcu4oufolpf\",\"authorization\":\"801585\",\"operation_type\":\"in\",\"method\":\"card\",\"transaction_type\":\"charge\",\"card\":{\"id\":\"kjxrvlpa6owf8wdj2exr\",\"type\":\"debit\",\"brand\":\"visa\",\"address\":null,\"card_number\":\"411111XXXXXX1111\",\"holder_name\":\"Juan Perez Ramirez\",\"expiration_year\":\"20\",\"expiration_month\":\"12\",\"allows_charges\":true,\"allows_payouts\":true,\"creation_date\":\"2017-11-27T17:22:45-06:00\",\"bank_name\":\"Banamex\",\"customer_id\":\"aiq8viq0qdnehyjfld5h\",\"bank_code\":\"002\"},\"status\":\"completed\",\"conciliated\":false,\"creation_date\":\"2017-11-27T17:22:46-06:00\",\"operation_date\":\"2017-11-27T17:22:46-06:00\",\"description\":\"Cargo inicial a mi cuenta\",\"error_message\":null,\"order_id\":null,\"customer_id\":\"aiq8viq0qdnehyjfld5h\",\"amount\":100.00,\"currency\":\"MXN\",\"fee\":{\"amount\":5.40,\"tax\":0.8640}}",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json",
+        "Date": "Mon, 27 Nov 2017 23:22:47 GMT",
+        "Expires": "0",
+        "Location": "https://sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/aiq8viq0qdnehyjfld5h/charges/trgkx77s9kcu4oufolpf",
+        "OpenPay-Request-ID": "5790dcaa-247c-4195-be14-d4c0e6994160",
+        "Pragma": "no-cache",
+        "Resource-ID": "trgkx77s9kcu4oufolpf",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

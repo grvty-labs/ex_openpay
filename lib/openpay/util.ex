@@ -36,7 +36,7 @@ defmodule ExOpenpay.Util do
   # this is useful to access top-level properties
   def handle_openpay_full_response(res) do
     cond do
-      res["error"] -> {:error, res}
+      res[:error] -> {:error, res}
       true -> {:ok, res}
       # true -> {:ok, ExOpenpay.Util.string_map_to_atoms res}
     end
@@ -55,10 +55,8 @@ defmodule ExOpenpay.Util do
       else
         q
       end
-      IO.inspect("YAHOO")
-      IO.inspect(ExOpenpay.make_request_with_key(:get, q, key ))
     ExOpenpay.make_request_with_key(:get, q, key )
-    # |> ExOpenpay.Util.handle_openpay_full_response
+    |> ExOpenpay.Util.handle_openpay_full_response
   end
 
   def list( endpoint, key, starting_after, limit) do
@@ -75,10 +73,10 @@ defmodule ExOpenpay.Util do
   end
 
   def count(endpoint, key) do
-    case ExOpenpay.make_request_with_key(:get, "#{endpoint}?include[]=total_count&limit=0", key)
+    case ExOpenpay.make_request_with_key(:get, "#{endpoint}?limit=0", key)
     |> ExOpenpay.Util.handle_openpay_full_response do
       {:ok, res} ->
-        {:ok, res[:total_count]}
+        {:ok, length(res)}
       {:error, err} -> raise err
     end
   end

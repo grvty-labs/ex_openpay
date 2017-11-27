@@ -121,9 +121,14 @@ defmodule ExOpenpay do
         :delete -> HTTPoison.delete(process_url(endpoint))
         _ -> request(method, endpoint, rb, rh, options)
       end
-    response.body
-    # {:ok, response} = request(method, endpoint, rb, rh, options)
-    # response.body
+      response.body
+      # if method == :delete do
+      #   if (Map.get(response, :body)) do
+      #     response.body
+      #   else
+      #     ""
+      #   end
+      # end
   end
 
   @doc """

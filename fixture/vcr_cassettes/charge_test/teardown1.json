@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/aiq8viq0qdnehyjfld5h"
+    },
+    "response": {
+      "binary": false,
+      "body": "",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "text/plain",
+        "Date": "Mon, 27 Nov 2017 23:22:47 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "a3233561-94f5-48fd-8edc-96782d220619",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "Connection": "keep-alive"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  }
+]

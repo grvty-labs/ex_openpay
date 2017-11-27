@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/akgqvivyyebqvrdmwous"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"category\":\"request\",\"description\":\"The customer with id 'akgqvivyyebqvrdmwous' does not exist\",\"http_code\":404,\"error_code\":1005,\"request_id\":\"3ca0ea08-b1ad-40f8-8552-e2db64d92609\"}",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json",
+        "Date": "Mon, 27 Nov 2017 23:22:41 GMT",
+        "Expires": "0",
+        "OP-Error-Code": "1005",
+        "OpenPay-Request-ID": "3ca0ea08-b1ad-40f8-8552-e2db64d92609",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "Content-Length": "183",
+        "Connection": "keep-alive"
+      },
+      "status_code": 404,
+      "type": "ok"
+    }
+  }
+]
