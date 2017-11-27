@@ -37,12 +37,13 @@ defmodule ExOpenpay.Util do
   def handle_openpay_full_response(res) do
     cond do
       res["error"] -> {:error, res}
-      true -> {:ok, ExOpenpay.Util.string_map_to_atoms res}
+      true -> {:ok, res}
+      # true -> {:ok, ExOpenpay.Util.string_map_to_atoms res}
     end
   end
 
   def list_raw( endpoint, limit \\ 10, starting_after \\ "") do
-    list_raw endpoint, ExOpenpay.config_or_env_key, limit, starting_after
+    list_raw endpoint, ExOpenpay.config_or_api_key, limit, starting_after
   end
 
   def list_raw( endpoint, key, limit, starting_after)  do
@@ -50,13 +51,14 @@ defmodule ExOpenpay.Util do
 
     q =
       if String.length(starting_after) > 0 do
-        q <> "&starting_after=#{starting_after}"
+        q <> "&creation[gte]=#{starting_after}"
       else
         q
       end
-
+      IO.inspect("YAHOO")
+      IO.inspect(ExOpenpay.make_request_with_key(:get, q, key ))
     ExOpenpay.make_request_with_key(:get, q, key )
-    |> ExOpenpay.Util.handle_openpay_full_response
+    # |> ExOpenpay.Util.handle_openpay_full_response
   end
 
   def list( endpoint, key, starting_after, limit) do
@@ -64,12 +66,12 @@ defmodule ExOpenpay.Util do
   end
 
   def list( endpoint, starting_after \\ "", limit \\ 10) do
-    list endpoint, ExOpenpay.config_or_env_key, starting_after, limit
+    list endpoint, ExOpenpay.config_or_api_key, starting_after, limit
   end
 
   # most openpay listing endpoints allow the total count to be included without any results
   def count(endpoint) do
-    count endpoint, ExOpenpay.config_or_env_key
+    count endpoint, ExOpenpay.config_or_api_key
   end
 
   def count(endpoint, key) do

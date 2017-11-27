@@ -36,6 +36,7 @@ defmodule ExOpenpay.CardTest do
             on_exit fn ->
               use_cassette "card_test/teardown2", match_requests_on: [:query, :request_body] do
                 ExOpenpay.Cards.delete :customer, customer.id, card.id
+                ExOpenpay.Cards.delete :customer, customer.id, card2.id
               end
             end
             {:ok, [customer: customer, card: card, card2: card2]}
@@ -47,6 +48,7 @@ defmodule ExOpenpay.CardTest do
     end
   end
 
+  @tag disabled: false
   test "Create card", %{customer: _, card: card, card2: _}  do
     assert card.card_number == "411111XXXXXX1111"
   end

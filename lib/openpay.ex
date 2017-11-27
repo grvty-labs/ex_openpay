@@ -5,7 +5,7 @@ defmodule ExOpenpay do
   transactions on openpay API.
 
   ## Configuring
-  By default the MERCHANT_ID environment variable is used to find
+  By default the OPENPAY_MERCHANT_ID environment variable is used to find
   your API key for ExOpenpay. You can also manually set your API key by
   configuring the :ex_openpay application. You can see the default
   configuration in the default_config/0 private function at the bottom of
@@ -42,7 +42,7 @@ defmodule ExOpenpay do
 
 
   @doc """
-  Grabs MERCHANT_ID from system ENV
+  Grabs OPENPAY_MERCHANT_ID from system ENV
   Returns binary
   """
   def config_or_env_key do
@@ -50,7 +50,7 @@ defmodule ExOpenpay do
   end
 
   @doc """
-  Grabs MERCHANT_ID from system ENV
+  Grabs OPENPAY_OPENPAY_MERCHANT_ID from system ENV
   Returns binary
   """
   def config_or_api_key do

@@ -81,4 +81,41 @@ defmodule ExOpenpay.Customers do
      ExOpenpay.make_request_with_key(:delete, "#{@endpoint}/#{id}", key)
    end
 
+  @max_fetch_size 100
+  @doc """
+  List all customers.
+  ##Example
+  ```
+  {:ok, customers} = ExOpenpay.Customers.all
+  ```
+  """
+  def all( accum \\ [], starting_after \\ "") do
+    all ExOpenpay.config_or_api_key, accum, starting_after
+  end
+
+  @doc """
+  List all customers.
+  Using a given openpay key to apply against the account associated.
+  ##Example
+  ```
+  {:ok, customers} = ExOpenpay.Customers.all key, accum, starting_after
+  ```
+  """
+  def all( key, accum, starting_after) do
+    # TODO: Return {ok, ellistado y validar en customer_test }
+    ExOpenpay.Util.list_raw("#{@endpoint}",key, @max_fetch_size, starting_after)
+    # case ExOpenpay.Util.list_raw("#{@endpoint}",key, @max_fetch_size, starting_after) do
+    #   {:ok, resp} ->
+    #     case resp[:has_more] do
+    #       true ->
+    #         last_sub = List.last( resp[:data] )
+    #         all( key, resp[:data] ++ accum, last_sub["id"] )
+    #       false ->
+    #         result = resp[:data] ++ accum
+    #         {:ok, result}
+    #     end
+    #   {:error, err} -> raise err
+    # end
+  end
+
 end
