@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "body": "{}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/assig5lpqhlxefakct2i/cards?limit=0"
+    },
+    "response": {
+      "binary": false,
+      "body": "[{\"id\":\"kdrrmn6jwk6kuq72bcuj\",\"type\":\"debit\",\"brand\":\"visa\",\"address\":null,\"card_number\":\"411111XXXXXX1111\",\"holder_name\":\"Juan Perez Ramirez\",\"expiration_year\":\"20\",\"expiration_month\":\"12\",\"allows_charges\":true,\"allows_payouts\":true,\"creation_date\":\"2017-11-28T15:16:30-06:00\",\"bank_name\":\"Banamex\",\"customer_id\":\"assig5lpqhlxefakct2i\",\"bank_code\":\"002\"},{\"id\":\"kvw8qcstszbygvpi3ark\",\"type\":\"debit\",\"brand\":\"visa\",\"address\":null,\"card_number\":\"411111XXXXXX1111\",\"holder_name\":\"Paco Sanchez Ramirez\",\"expiration_year\":\"19\",\"expiration_month\":\"10\",\"allows_charges\":true,\"allows_payouts\":true,\"creation_date\":\"2017-11-28T15:16:29-06:00\",\"bank_name\":\"Banamex\",\"customer_id\":\"assig5lpqhlxefakct2i\",\"bank_code\":\"002\"}]",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json",
+        "Date": "Tue, 28 Nov 2017 21:16:30 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "97abcf1c-4324-4a12-8eb6-f50fc966692a",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

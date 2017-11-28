@@ -1,0 +1,62 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/assig5lpqhlxefakct2i/cards/kdrrmn6jwk6kuq72bcuj"
+    },
+    "response": {
+      "binary": false,
+      "body": "",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "text/plain",
+        "Date": "Tue, 28 Nov 2017 21:16:31 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "69cc4ae9-58c2-49c8-8a77-fb7fd417b4e6",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "Connection": "keep-alive"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/assig5lpqhlxefakct2i/cards/kvw8qcstszbygvpi3ark"
+    },
+    "response": {
+      "binary": false,
+      "body": "",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "text/plain",
+        "Date": "Tue, 28 Nov 2017 21:16:31 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "4ebcde40-4736-4c82-8b1b-5be833aa2db5",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "Connection": "keep-alive"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  }
+]
