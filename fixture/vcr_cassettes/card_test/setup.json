@@ -1,0 +1,110 @@
+[
+  {
+    "request": {
+      "body": "{\"phone_number\":\"\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"customer_test1@gmail.com\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":\"atj61fl97trpk4ldwo2i\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"customer_test1@gmail.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0,\"address\":null,\"creation_date\":\"2018-03-06T14:10:53-06:00\",\"external_id\":null,\"clabe\":null}",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Tue, 06 Mar 2018 20:10:53 GMT",
+        "Expires": "0",
+        "Location": "https://sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/atj61fl97trpk4ldwo2i",
+        "OpenPay-Request-ID": "2c90c4bc-9cc1-4228-9569-e9dc20e3f2b9",
+        "Pragma": "no-cache",
+        "Resource-ID": "atj61fl97trpk4ldwo2i",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{\"holder_name\":\"Paco Sanchez Ramirez\",\"expiration_year\":\"19\",\"expiration_month\":\"10\",\"cvv2\":\"210\",\"card_number\":\"4111111111111111\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/atj61fl97trpk4ldwo2i/cards"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":\"kx2j4unzbffsau22jskc\",\"type\":\"debit\",\"brand\":\"visa\",\"address\":null,\"card_number\":\"411111XXXXXX1111\",\"holder_name\":\"Paco Sanchez Ramirez\",\"expiration_year\":\"19\",\"expiration_month\":\"10\",\"allows_charges\":true,\"allows_payouts\":true,\"creation_date\":\"2018-03-06T14:10:55-06:00\",\"bank_name\":\"Banamex\",\"customer_id\":\"atj61fl97trpk4ldwo2i\",\"bank_code\":\"002\"}",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Tue, 06 Mar 2018 20:10:55 GMT",
+        "Expires": "0",
+        "Location": "https://sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/atj61fl97trpk4ldwo2i/cards/kx2j4unzbffsau22jskc",
+        "OpenPay-Request-ID": "a48c5c3a-67a5-4800-9c04-9ecca105d48e",
+        "Pragma": "no-cache",
+        "Resource-ID": "kx2j4unzbffsau22jskc",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{\"holder_name\":\"Juan Perez Ramirez\",\"expiration_year\":\"20\",\"expiration_month\":\"12\",\"cvv2\":\"110\",\"card_number\":\"4111111111111111\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/atj61fl97trpk4ldwo2i/cards"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":\"k5fz3c4t5v21ocealfns\",\"type\":\"debit\",\"brand\":\"visa\",\"address\":null,\"card_number\":\"411111XXXXXX1111\",\"holder_name\":\"Juan Perez Ramirez\",\"expiration_year\":\"20\",\"expiration_month\":\"12\",\"allows_charges\":true,\"allows_payouts\":true,\"creation_date\":\"2018-03-06T14:10:56-06:00\",\"bank_name\":\"Banamex\",\"customer_id\":\"atj61fl97trpk4ldwo2i\",\"bank_code\":\"002\"}",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Tue, 06 Mar 2018 20:10:56 GMT",
+        "Expires": "0",
+        "Location": "https://sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/atj61fl97trpk4ldwo2i/cards/k5fz3c4t5v21ocealfns",
+        "OpenPay-Request-ID": "a833b3e7-d59d-49e0-8502-e3f569623e10",
+        "Pragma": "no-cache",
+        "Resource-ID": "k5fz3c4t5v21ocealfns",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  }
+]
