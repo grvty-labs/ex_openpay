@@ -64,8 +64,7 @@ defmodule ExOpenpay.TokenTest do
         device_session_id: "8VIoXj0hN5dswYHQ9X1mVCiB72M7FY9o"
       ]
       case ExOpenpay.Cards.create :customer, customer.id, card_with_token_params do
-        {:ok, found} ->
-          assert Map.get(found, :id) == Map.get(token, :id)
+        {:ok, found} -> assert Map.get(found, :id) == Map.get(token, :id)
         {:error, err} -> flunk err
       end
     end
