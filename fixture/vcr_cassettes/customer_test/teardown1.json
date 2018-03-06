@@ -6,18 +6,18 @@
       "method": "delete",
       "options": [],
       "request_body": "",
-      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/a1uwk7bs9lcaubretbj3"
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/axakqgxlpqk964igcoen"
     },
     "response": {
       "binary": false,
-      "body": "{\"category\":\"request\",\"description\":\"The customer with id 'a1uwk7bs9lcaubretbj3' does not exist\",\"http_code\":404,\"error_code\":1005,\"request_id\":\"4d1f0dad-bd8b-4549-b0e4-47d62da8aba9\"}",
+      "body": "{\"category\":\"request\",\"description\":\"The customer with id 'axakqgxlpqk964igcoen' does not exist\",\"http_code\":404,\"error_code\":1005,\"request_id\":\"28f4f883-94a9-46c9-ac05-ad60e05be378\"}",
       "headers": {
         "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
         "Content-Type": "application/json;charset=UTF-8",
-        "Date": "Tue, 06 Mar 2018 20:11:00 GMT",
+        "Date": "Tue, 06 Mar 2018 20:33:20 GMT",
         "Expires": "0",
         "OP-Error-Code": "1005",
-        "OpenPay-Request-ID": "4d1f0dad-bd8b-4549-b0e4-47d62da8aba9",
+        "OpenPay-Request-ID": "28f4f883-94a9-46c9-ac05-ad60e05be378",
         "Pragma": "no-cache",
         "Server": "Apache-Coyote/1.1",
         "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",

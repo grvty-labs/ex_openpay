@@ -8,17 +8,17 @@
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/atj61fl97trpk4ldwo2i/cards?limit=100"
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/aur53hfah9uueqsqmgk2/cards?limit=100"
     },
     "response": {
       "binary": false,
-      "body": "[{\"id\":\"k5fz3c4t5v21ocealfns\",\"type\":\"debit\",\"brand\":\"visa\",\"address\":null,\"card_number\":\"411111XXXXXX1111\",\"holder_name\":\"Juan Perez Ramirez\",\"expiration_year\":\"20\",\"expiration_month\":\"12\",\"allows_charges\":true,\"allows_payouts\":true,\"creation_date\":\"2018-03-06T14:10:56-06:00\",\"bank_name\":\"Banamex\",\"customer_id\":\"atj61fl97trpk4ldwo2i\",\"bank_code\":\"002\"},{\"id\":\"kx2j4unzbffsau22jskc\",\"type\":\"debit\",\"brand\":\"visa\",\"address\":null,\"card_number\":\"411111XXXXXX1111\",\"holder_name\":\"Paco Sanchez Ramirez\",\"expiration_year\":\"19\",\"expiration_month\":\"10\",\"allows_charges\":true,\"allows_payouts\":true,\"creation_date\":\"2018-03-06T14:10:55-06:00\",\"bank_name\":\"Banamex\",\"customer_id\":\"atj61fl97trpk4ldwo2i\",\"bank_code\":\"002\"}]",
+      "body": "[{\"id\":\"k4ux1f1jhmwtejyhfraz\",\"type\":\"debit\",\"brand\":\"visa\",\"address\":null,\"card_number\":\"411111XXXXXX1111\",\"holder_name\":\"Juan Perez Ramirez\",\"expiration_year\":\"20\",\"expiration_month\":\"12\",\"allows_charges\":true,\"allows_payouts\":true,\"creation_date\":\"2018-03-06T14:33:14-06:00\",\"bank_name\":\"Banamex\",\"customer_id\":\"aur53hfah9uueqsqmgk2\",\"bank_code\":\"002\"},{\"id\":\"k4cxjqure9qdgc8fk4ea\",\"type\":\"debit\",\"brand\":\"visa\",\"address\":null,\"card_number\":\"411111XXXXXX1111\",\"holder_name\":\"Paco Sanchez Ramirez\",\"expiration_year\":\"19\",\"expiration_month\":\"10\",\"allows_charges\":true,\"allows_payouts\":true,\"creation_date\":\"2018-03-06T14:33:12-06:00\",\"bank_name\":\"Banamex\",\"customer_id\":\"aur53hfah9uueqsqmgk2\",\"bank_code\":\"002\"}]",
       "headers": {
         "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
         "Content-Type": "application/json;charset=UTF-8",
-        "Date": "Tue, 06 Mar 2018 20:10:57 GMT",
+        "Date": "Tue, 06 Mar 2018 20:33:13 GMT",
         "Expires": "0",
-        "OpenPay-Request-ID": "ab472587-ecb8-4435-bb4c-9149c87eaaa1",
+        "OpenPay-Request-ID": "a157cd85-f7a1-4f1d-bd47-6ed0f85ade1b",
         "Pragma": "no-cache",
         "Server": "Apache-Coyote/1.1",
         "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",

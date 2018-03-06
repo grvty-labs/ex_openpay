@@ -6,7 +6,7 @@
       "method": "delete",
       "options": [],
       "request_body": "",
-      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/atj61fl97trpk4ldwo2i/cards/k5fz3c4t5v21ocealfns"
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/aur53hfah9uueqsqmgk2/cards/k4ux1f1jhmwtejyhfraz"
     },
     "response": {
       "binary": false,
@@ -14,9 +14,9 @@
       "headers": {
         "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
         "Content-Type": "text/plain",
-        "Date": "Tue, 06 Mar 2018 20:10:57 GMT",
+        "Date": "Tue, 06 Mar 2018 20:33:14 GMT",
         "Expires": "0",
-        "OpenPay-Request-ID": "b08bc824-1355-47aa-94d6-67f18c2fde7b",
+        "OpenPay-Request-ID": "51586762-e9c7-45cd-a8e6-63fd1789b8f0",
         "Pragma": "no-cache",
         "Server": "Apache-Coyote/1.1",
         "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
@@ -36,7 +36,7 @@
       "method": "delete",
       "options": [],
       "request_body": "",
-      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/atj61fl97trpk4ldwo2i/cards/kx2j4unzbffsau22jskc"
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/aur53hfah9uueqsqmgk2/cards/k4cxjqure9qdgc8fk4ea"
     },
     "response": {
       "binary": false,
@@ -44,9 +44,9 @@
       "headers": {
         "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
         "Content-Type": "text/plain",
-        "Date": "Tue, 06 Mar 2018 20:10:57 GMT",
+        "Date": "Tue, 06 Mar 2018 20:33:14 GMT",
         "Expires": "0",
-        "OpenPay-Request-ID": "d993649b-e083-4487-a5e9-2166629161be",
+        "OpenPay-Request-ID": "c05439c0-5887-4f16-a998-70d2aad9b277",
         "Pragma": "no-cache",
         "Server": "Apache-Coyote/1.1",
         "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
