@@ -1,9 +1,11 @@
-# Openpay for Elixir [![Build Status](https://travis-ci.org/grvty-labs/openpay.svg?branch=master)](https://travis-ci.org/grvty-labs/openpay) [![Hex.pm](https://img.shields.io/hexpm/v/stripity_openpay.svg?maxAge=2592000)](https://hex.pm/packages/stripity_openpay) [![Hex Docs](https://img.shields.io/badge/hex-docs-9768d1.svg)](https://hexdocs.pm/stripity_openpay) [![Hex.pm](https://img.shields.io/hexpm/dt/stripity_openpay.svg?maxAge=2592000)](https://hex.pm/packages/stripity_openpay) [![Inline docs](http://inch-ci.org/github/grvty-labs/openpay.svg)](http://inch-ci.org/github/grvty-labs/openpay) [![Coverage Status](https://coveralls.io/repos/github/grvty-labs/openpay/badge.svg?branch=master)](https://coveralls.io/github/grvty-labs/openpay?branch=master)
+# Openpay for Elixir [![Build Status](https://img.shields.io/badge/build-passed-brightgreen.svg)](https://grvtylabs.org/grvty-labs/openpay) [![Hex.pm](https://img.shields.io/badge/hex-v0.1.1-orange.svg)](https://hex.pm/packages/ex_openpay) [![Hex Docs](https://img.shields.io/badge/hex-docs-9768d1.svg)](https://hexdocs.pm/ex_openpay) [![Hex.pm](https://img.shields.io/hexpm/dt/ex_openpay.svg?maxAge=2592000)](https://hex.pm/packages/ex_openpay) [![Coverage Status](https://coveralls.io/repos/github/grvty-labs/openpay/badge.svg?branch=master)](https://coveralls.io/github/grvty-labs/openpay?branch=master)
 
 An Elixir library for working with [Openpay](http://openpay.mx/).
 
 Features:
-...
+* manage customers [ExOpenpay.Customers](https://github.com/grvty-labs/ex_openpay/blob/master/lib/openpay/customers.ex)
+* manage tokens for credit card and bank account [ExOpenpay.Cards](https://github.com/grvty-labs/ex_openpay/blob/master/lib/openpay/cards.ex)
+* manage/capture charges with or without an existing Customer [ExOpenpay.Charges](https://github.com/grvty-labs/ex_openpay/blob/master/lib/openpay/charges.ex)
 
 ## Openpay API
 
@@ -14,14 +16,14 @@ Works with API version 2017-11-24
 Install the dependency:
 
 ```ex
-{:ex_openpay, "~> 0.1.0"}
+{:ex_openpay, "~> 0.1.1"}
 ```
 
 Next, add to your applications:
 
 ```ex
 defp application do
-  [applications: [:ex_openpay]]
+  extra_applications: [:ex_openpay]
 end
 ```
 
@@ -58,9 +60,12 @@ I've tried to make the API somewhat comprehensive and intuitive. If you'd like t
 In general, if Openpay requires some information for a given API call, you'll find that as part of the arity of the given function. For instance if you want to delete a Customer, you'll find that you *must* pass the id along:
 
 ```ex
-{:ok, result} = Openpay.Customers.delete "some_id"
+{:ok, result} = ExOpenpay.Customers.delete "some_id"
 ```
 
+## Authors
+
+* Yamil Díaz Aguirre (<yamilquery@gmail.com>)
 
 ## Contributing
 

@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "body": "{}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers?limit=100"
+    },
+    "response": {
+      "binary": false,
+      "body": "[{\"id\":\"axakqgxlpqk964igcoen\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"test_customer1@grvtylabs.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0.00,\"address\":null,\"creation_date\":\"2018-03-06T14:33:18-06:00\",\"external_id\":null,\"clabe\":null},{\"id\":\"ayexcbgpbnuqhh778hkn\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"customer_test2@gmail.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0.00,\"address\":null,\"creation_date\":\"2018-03-06T14:33:16-06:00\",\"external_id\":null,\"clabe\":null},{\"id\":\"aoldd1eafor4w8oauexh\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"customer_test2@gmail.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0.00,\"address\":null,\"creation_date\":\"2018-03-06T14:26:57-06:00\",\"external_id\":null,\"clabe\":null},{\"id\":\"afuwgkoxx1krawj8nuyf\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"customer_test2@gmail.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0.00,\"address\":null,\"creation_date\":\"2018-03-06T14:26:35-06:00\",\"external_id\":null,\"clabe\":null},{\"id\":\"akcc54yuww1e6xbf1yun\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"customer_test2@gmail.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0.00,\"address\":null,\"creation_date\":\"2018-03-06T14:24:35-06:00\",\"external_id\":null,\"clabe\":null}]",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Tue, 06 Mar 2018 20:33:18 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "fa70447e-6b2f-45e7-9240-3ef7730a4159",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

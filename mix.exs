@@ -2,8 +2,8 @@ defmodule ExOpenpay.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :openpay,
-     version: "0.1.0",
+    [app: :ex_openpay,
+     version: "0.1.2",
      description: description(),
      package: package(),
      elixir: "~> 1.4",
@@ -38,12 +38,12 @@ defmodule ExOpenpay.Mixfile do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      files: ["lib", "mix.exs", "README*", "config", "test"],
       maintainers: ["Yamil Díaz Aguirre"],
       licenses: ["New BSD"],
       links: %{
-        "GitHub" => "https://github.com/grvty-labs/openpay",
-        "Docs" => "https://hexdocs.pm/openpay"
+        "GitHub" => "https://github.com/grvty-labs/ex_openpay",
+        "Docs" => "https://hexdocs.pm/ex_openpay"
       }
     ]
   end

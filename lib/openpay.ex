@@ -5,15 +5,15 @@ defmodule ExOpenpay do
   transactions on openpay API.
 
   ## Configuring
-  By default the MERCHANT_ID environment variable is used to find
+  By default the OPENPAY_MERCHANT_ID environment variable is used to find
   your API key for ExOpenpay. You can also manually set your API key by
-  configuring the :openpay application. You can see the default
+  configuring the :ex_openpay application. You can see the default
   configuration in the default_config/0 private function at the bottom of
   this file. The value for platform client id is optional.
 
   ```
-    config :openpay, merchant_id: YOUR_OPENPAY_MERCHANT_ID
-    config :openpay, api_key: YOUR_OPENPAY_API_KEY
+    config :ex_openpay, merchant_id: YOUR_OPENPAY_MERCHANT_ID
+    config :ex_openpay, api_key: YOUR_OPENPAY_API_KEY
   ```
   """
 
@@ -26,7 +26,7 @@ defmodule ExOpenpay do
       correct environment instance to ExOpenpay. Please configure
       merchant_id in your config.exs and environment specific config files
       to have accurate reporting of errors.
-      config :openpay, merchant_id: YOUR_MERCHANT_ID
+      config :ex_openpay, merchant_id: YOUR_MERCHANT_ID
     """
   end
 
@@ -36,13 +36,13 @@ defmodule ExOpenpay do
       correct environment instance to ExOpenpay. Please configure
       api_key in your config.exs and environment specific config files
       to have accurate reporting of errors.
-      config :openpay, api_key: YOUR_API_KEY
+      config :ex_openpay, api_key: YOUR_API_KEY
     """
   end
 
 
   @doc """
-  Grabs MERCHANT_ID from system ENV
+  Grabs OPENPAY_MERCHANT_ID from system ENV
   Returns binary
   """
   def config_or_env_key do
@@ -50,7 +50,7 @@ defmodule ExOpenpay do
   end
 
   @doc """
-  Grabs MERCHANT_ID from system ENV
+  Grabs OPENPAY_OPENPAY_MERCHANT_ID from system ENV
   Returns binary
   """
   def config_or_api_key do
@@ -59,11 +59,11 @@ defmodule ExOpenpay do
 
   @doc """
   Creates the URL for our endpoint. You can also manually set API base url
-  for testing purpose by configuring the :openpay application
+  for testing purpose by configuring the :ex_openpay application
   with `:api_base_url` key. By default `https://api.openpay.com/v1/`.
   Here is an example:
 
-      iex> Application.put_env(:openpay, :api_base_url, "http://localhost:4004")
+      iex> Application.put_env(:ex_openpay, :api_base_url, "http://localhost:4004")
       :ok
 
       iex> ExOpenpay.process_url("/plans")
@@ -74,7 +74,7 @@ defmodule ExOpenpay do
   Returns string
   """
   def process_url(endpoint) do
-    api_base_url = Application.get_env(:openpay, :api_base_url, "https://#{ExOpenpay.config_or_api_key}:@#{ExOpenpay.Connect.base_api}/v1/#{ExOpenpay.config_or_env_key}/")
+    api_base_url = Application.get_env(:ex_openpay, :api_base_url, "https://#{ExOpenpay.config_or_api_key}:@#{ExOpenpay.Connect.base_api}/v1/#{ExOpenpay.config_or_env_key}/")
     api_base_url <> endpoint
   end
 
@@ -121,9 +121,14 @@ defmodule ExOpenpay do
         :delete -> HTTPoison.delete(process_url(endpoint))
         _ -> request(method, endpoint, rb, rh, options)
       end
-    response.body
-    # {:ok, response} = request(method, endpoint, rb, rh, options)
-    # response.body
+      response.body
+      # if method == :delete do
+      #   if (Map.get(response, :body)) do
+      #     response.body
+      #   else
+      #     ""
+      #   end
+      # end
   end
 
   @doc """
@@ -142,7 +147,7 @@ defmodule ExOpenpay do
   end
 
   defp require_openpay_merchant_id do
-    case Application.get_env(:openpay, :merchant_id, System.get_env "MERCHANT_ID") || :not_found do
+    case Application.get_env(:ex_openpay, :merchant_id, System.get_env "OPENPAY_MERCHANT_ID") || :not_found do
       :not_found ->
         raise MissingSecretKeyError
       value -> value
@@ -150,7 +155,7 @@ defmodule ExOpenpay do
   end
 
   defp require_openpay_api_key do
-    case Application.get_env(:openpay, :api_key, System.get_env "API_KEY") || :not_found do
+    case Application.get_env(:ex_openpay, :api_key, System.get_env "OPENPAY_API_KEY") || :not_found do
       :not_found ->
         raise MissingApiKeyError
       value -> value
@@ -158,6 +163,6 @@ defmodule ExOpenpay do
   end
 
   defp httpoison_request_options() do
-    Application.get_env(:openpay, :httpoison_options, [])
+    Application.get_env(:ex_openpay, :httpoison_options, [])
   end
 end

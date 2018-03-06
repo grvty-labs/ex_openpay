@@ -1,0 +1,38 @@
+[
+  {
+    "request": {
+      "body": "{\"token_id\":\"kyfz4jfmnm0pe3m8h6tu\",\"device_session_id\":\"8VIoXj0hN5dswYHQ9X1mVCiB72M7FY9o\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/ayexcbgpbnuqhh778hkn/cards"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":\"kyfz4jfmnm0pe3m8h6tu\",\"type\":\"debit\",\"brand\":\"visa\",\"address\":null,\"card_number\":\"411111XXXXXX1111\",\"holder_name\":\"Juan Perez Ramirez\",\"expiration_year\":\"20\",\"expiration_month\":\"12\",\"allows_charges\":true,\"allows_payouts\":true,\"creation_date\":\"2018-03-06T14:33:16-06:00\",\"bank_name\":\"Banamex\",\"customer_id\":\"ayexcbgpbnuqhh778hkn\",\"bank_code\":\"002\"}",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Tue, 06 Mar 2018 20:33:17 GMT",
+        "Expires": "0",
+        "Location": "https://sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/ayexcbgpbnuqhh778hkn/cards/kyfz4jfmnm0pe3m8h6tu",
+        "OpenPay-Request-ID": "a047b32f-1e82-427c-adec-e86c2760c3fc",
+        "Pragma": "no-cache",
+        "Resource-ID": "kyfz4jfmnm0pe3m8h6tu",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  }
+]

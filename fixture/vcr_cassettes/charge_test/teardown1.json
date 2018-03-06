@@ -6,7 +6,7 @@
       "method": "delete",
       "options": [],
       "request_body": "",
-      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/aur53hfah9uueqsqmgk2"
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/au4j0nsn1xf4wlk7pcf4"
     },
     "response": {
       "binary": false,
@@ -14,9 +14,9 @@
       "headers": {
         "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
         "Content-Type": "text/plain",
-        "Date": "Tue, 06 Mar 2018 20:33:14 GMT",
+        "Date": "Tue, 06 Mar 2018 20:33:24 GMT",
         "Expires": "0",
-        "OpenPay-Request-ID": "f0d21efc-6b4e-4061-a55f-87b9fde7c78e",
+        "OpenPay-Request-ID": "11fa3896-2665-468f-b436-b3fefb56801e",
         "Pragma": "no-cache",
         "Server": "Apache-Coyote/1.1",
         "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
