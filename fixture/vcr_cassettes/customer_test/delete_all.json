@@ -1,0 +1,232 @@
+[
+  {
+    "request": {
+      "body": "{\"phone_number\":\"\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"delete1@grvtylabs.com\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":\"atcsi2x0osi06ar9ttz1\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"delete1@grvtylabs.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0,\"address\":null,\"creation_date\":\"2018-03-06T14:11:00-06:00\",\"external_id\":null,\"clabe\":null}",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Tue, 06 Mar 2018 20:10:59 GMT",
+        "Expires": "0",
+        "Location": "https://sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/atcsi2x0osi06ar9ttz1",
+        "OpenPay-Request-ID": "66adc83c-9f46-44ef-a322-b5484a4519cc",
+        "Pragma": "no-cache",
+        "Resource-ID": "atcsi2x0osi06ar9ttz1",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{\"phone_number\":\"\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"delete2@grvtylabs.com\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":\"aycpmxxygqh4dlfzjlzq\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"delete2@grvtylabs.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0,\"address\":null,\"creation_date\":\"2018-03-06T14:11:00-06:00\",\"external_id\":null,\"clabe\":null}",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Tue, 06 Mar 2018 20:10:59 GMT",
+        "Expires": "0",
+        "Location": "https://sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/aycpmxxygqh4dlfzjlzq",
+        "OpenPay-Request-ID": "fe075566-ab0e-481a-9599-4c29d5cb08b4",
+        "Pragma": "no-cache",
+        "Resource-ID": "aycpmxxygqh4dlfzjlzq",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers?limit=100"
+    },
+    "response": {
+      "binary": false,
+      "body": "[{\"id\":\"atcsi2x0osi06ar9ttz1\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"delete1@grvtylabs.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0.00,\"address\":null,\"creation_date\":\"2018-03-06T14:11:00-06:00\",\"external_id\":null,\"clabe\":null},{\"id\":\"aycpmxxygqh4dlfzjlzq\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"delete2@grvtylabs.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0.00,\"address\":null,\"creation_date\":\"2018-03-06T14:11:00-06:00\",\"external_id\":null,\"clabe\":null},{\"id\":\"a1uwk7bs9lcaubretbj3\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"test_customer1@grvtylabs.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0.00,\"address\":null,\"creation_date\":\"2018-03-06T14:10:59-06:00\",\"external_id\":null,\"clabe\":null}]",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Tue, 06 Mar 2018 20:10:59 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "a08d9f13-0935-4039-8cae-ec41b2fcceca",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/atcsi2x0osi06ar9ttz1"
+    },
+    "response": {
+      "binary": false,
+      "body": "",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "text/plain",
+        "Date": "Tue, 06 Mar 2018 20:10:59 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "af8e99e0-4b1e-47c8-b341-55afcc0b88f0",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "Connection": "keep-alive"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/aycpmxxygqh4dlfzjlzq"
+    },
+    "response": {
+      "binary": false,
+      "body": "",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "text/plain",
+        "Date": "Tue, 06 Mar 2018 20:11:00 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "5d3306ad-97db-4609-97e4-ee8f80c387ca",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "Connection": "keep-alive"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/a1uwk7bs9lcaubretbj3"
+    },
+    "response": {
+      "binary": false,
+      "body": "",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "text/plain",
+        "Date": "Tue, 06 Mar 2018 20:11:00 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "b9ed263b-63bd-4305-8977-e6c520cf8fad",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "Connection": "keep-alive"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers?limit=0"
+    },
+    "response": {
+      "binary": false,
+      "body": "[]",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Tue, 06 Mar 2018 20:11:00 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "2e5674f9-7d89-4079-987d-7b60689db5dc",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

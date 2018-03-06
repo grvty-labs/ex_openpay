@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "body": "{}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://OPENPAY_API_KEY:@sandbox-api.openpay.mx/v1/OPENPAY_MERCHANT_ID/customers/a1uwk7bs9lcaubretbj3"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":\"a1uwk7bs9lcaubretbj3\",\"name\":\"Yamil\",\"last_name\":\"Díaz Aguirre\",\"email\":\"test_customer1@grvtylabs.com\",\"phone_number\":\"\",\"status\":\"active\",\"balance\":0.00,\"address\":null,\"creation_date\":\"2018-03-06T14:10:59-06:00\",\"external_id\":null,\"clabe\":null}",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Tue, 06 Mar 2018 20:10:58 GMT",
+        "Expires": "0",
+        "OpenPay-Request-ID": "c63c3ffe-771a-4c48-82f7-7004d55a4cbf",
+        "Pragma": "no-cache",
+        "Server": "Apache-Coyote/1.1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
