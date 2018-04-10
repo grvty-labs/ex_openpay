@@ -8,9 +8,21 @@ defmodule ExOpenpay.Connect do
 
   (reference https://openpay.com/docs/connect/standalone-accounts)
   """
+  @sandbox_base_url "sandbox-api.openpay.mx"
+  @production_base_url "api.openpay.mx"
 
   def base_api do
-    "sandbox-api.openpay.mx"
+    case Application.get_env(:ex_openpay, :mode, "sandbox") do
+      "production" -> @production_base_url
+      "sandbox" -> @sandbox_base_url
+      _ -> @sandbox_base_url
+    end
   end
 
+  @doc """
+    Grabs the api version from the application config, defaults to "v1"
+  """
+  def api_version do
+    Application.get_env(:ex_openpay, :api_version, "v1")
+  end
 end

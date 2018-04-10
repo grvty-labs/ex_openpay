@@ -69,7 +69,7 @@ defmodule ExOpenpay.Cards do
       {:ok, card} = ExOpenpay.Cards.get(:customer, customer_id, card_id)
   """
   def get(owner_type, owner_id, id) do
-    get owner_type, owner_id, id, ExOpenpay.config_or_env_key
+    get owner_type, owner_id, id, ExOpenpay.config_or_api_key
   end
 
   @doc """
@@ -96,7 +96,7 @@ defmodule ExOpenpay.Cards do
        {:ok, cards} = ExOpenpay.Cards.list(:customer, customer_id, 5, 20) # Get a list of up to 20 cards, skipping first 5 cards
    """
    def list(owner_type, owner_id, starting_after \\ "", limit \\ 10) do
-     list owner_type, owner_id, ExOpenpay.config_or_env_key, starting_after, limit
+     list owner_type, owner_id, ExOpenpay.config_or_api_key, starting_after, limit
    end
 
    @doc """
