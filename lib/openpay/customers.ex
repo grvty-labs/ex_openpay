@@ -68,7 +68,7 @@ defmodule ExOpenpay.Customers do
        {:ok, customer} = ExOpenpay.Customers.get(customer_id)
    """
    def get(id) do
-     get id, ExOpenpay.config_or_env_key
+     get id, ExOpenpay.config_or_api_key
    end
 
    @doc """

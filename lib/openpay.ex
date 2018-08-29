@@ -22,27 +22,26 @@ defmodule ExOpenpay do
 
   defmodule MissingSecretKeyError do
     defexception message: """
-      The merchant_id setting is required so that we can report the
-      correct environment instance to ExOpenpay. Please configure
-      merchant_id in your config.exs and environment specific config files
-      to have accurate reporting of errors.
-      config :ex_openpay, merchant_id: YOUR_MERCHANT_ID
-    """
+                   The merchant_id setting is required so that we can report the
+                   correct environment instance to ExOpenpay. Please configure
+                   merchant_id in your config.exs and environment specific config files
+                   to have accurate reporting of errors.
+                   config :ex_openpay, merchant_id: YOUR_MERCHANT_ID
+                 """
   end
 
   defmodule MissingApiKeyError do
     defexception message: """
-      The api_key setting is required so that we can report the
-      correct environment instance to ExOpenpay. Please configure
-      api_key in your config.exs and environment specific config files
-      to have accurate reporting of errors.
-      config :ex_openpay, api_key: YOUR_API_KEY
-    """
+                   The api_key setting is required so that we can report the
+                   correct environment instance to ExOpenpay. Please configure
+                   api_key in your config.exs and environment specific config files
+                   to have accurate reporting of errors.
+                   config :ex_openpay, api_key: YOUR_API_KEY
+                 """
   end
 
-
   @doc """
-  Grabs OPENPAY_MERCHANT_ID from system ENV
+  Grabs OPENPAY_MERCHANT_ID from system ENV or ```config :ex_openpay, merchant_id: YOUR_OPENPAY_MERCHANT_ID```
   Returns binary
   """
   def config_or_env_key do
@@ -50,7 +49,7 @@ defmodule ExOpenpay do
   end
 
   @doc """
-  Grabs OPENPAY_OPENPAY_MERCHANT_ID from system ENV
+  Grabs OPENPAY_OPENPAY_MERCHANT_ID from system ENV or ```config :ex_openpay, api_key: YOUR_OPENPAY_API_KEY```
   Returns binary
   """
   def config_or_api_key do
@@ -60,7 +59,7 @@ defmodule ExOpenpay do
   @doc """
   Creates the URL for our endpoint. You can also manually set API base url
   for testing purpose by configuring the :ex_openpay application
-  with `:api_base_url` key. By default `https://api.openpay.com/v1/`.
+  with `:api_base_url` key. By default `https://sandbox-api.openpay.com/v1/`.
   Here is an example:
 
       iex> Application.put_env(:ex_openpay, :api_base_url, "http://localhost:4004")
@@ -74,19 +73,33 @@ defmodule ExOpenpay do
   Returns string
   """
   def process_url(endpoint) do
-    api_base_url = Application.get_env(:ex_openpay, :api_base_url, "https://#{ExOpenpay.config_or_api_key}:@#{ExOpenpay.Connect.base_api}/v1/#{ExOpenpay.config_or_env_key}/")
+    api_base_url =
+      Application.get_env(
+        :ex_openpay,
+        :api_base_url,
+        "https://#{ExOpenpay.Connect.base_api()}/#{ExOpenpay.Connect.api_version()}/#{
+          ExOpenpay.config_or_env_key()
+        }/"
+      )
+
     api_base_url <> endpoint
   end
 
   @doc """
   Set our request headers for every request.
+  Encodes the API secret key in base 64 format to be sent via Authorization Basic header
+  https://es.wikipedia.org/wiki/Autenticaci%C3%B3n_de_acceso_b%C3%A1sica
   """
-  def req_headers(_key) do
-    Map.new
-      |> Map.put("Content-Type",  "application/json")
-      # |> Map.put("Accept", "application/json; charset=utf-8")
-      # |> Map.put("Authorization", "Basic #{key}")
-      # |> Map.put("User-Agent",    "ExOpenpay/v1 openpay/1.4.0")
+  def req_headers(key) do
+    auth_key = Base.encode64("#{key}:")
+
+    Map.new()
+    |> Map.put("Content-Type", "application/json")
+    |> Map.put("Authorization", "Basic #{auth_key}")
+
+    # |> Map.put("Accept", "application/json; charset=utf-8")
+    # |> Map.put("Authorization", "Basic #{key}")
+    # |> Map.put("User-Agent",    "ExOpenpay/v1 openpay/1.4.0")
   end
 
   @doc """
@@ -96,7 +109,7 @@ defmodule ExOpenpay do
   Returns Record or ArgumentError
   """
   def process_response_body(body) do
-    Poison.decode! body
+    Poison.decode!(body)
   end
 
   @doc """
@@ -110,25 +123,30 @@ defmodule ExOpenpay do
     * options - request options
   Returns tuple
   """
-  def make_request_with_key( method, endpoint, key, body \\ %{}, headers \\ %{}, options \\ []) do
+  def make_request_with_key(method, endpoint, key, body \\ %{}, headers \\ %{}, options \\ []) do
     rb = ExOpenpay.URI.encode_query(body)
-    rh = req_headers(key)
-        |> Map.merge(headers)
-        |> Map.to_list
+
+    rh =
+      req_headers(key)
+      |> Map.merge(headers)
+      |> Map.to_list()
+
     options = Keyword.merge(httpoison_request_options(), options)
+
     {:ok, response} =
       case method do
-        :delete -> HTTPoison.delete(process_url(endpoint))
+        :delete -> HTTPoison.delete(process_url(endpoint), rh)
         _ -> request(method, endpoint, rb, rh, options)
       end
-      response.body
-      # if method == :delete do
-      #   if (Map.get(response, :body)) do
-      #     response.body
-      #   else
-      #     ""
-      #   end
-      # end
+
+    response.body
+    # if method == :delete do
+    #   if (Map.get(response, :body)) do
+    #     response.body
+    #   else
+    #     ""
+    #   end
+    # end
   end
 
   @doc """
@@ -143,22 +161,28 @@ defmodule ExOpenpay do
   Returns tuple
   """
   def make_request(method, endpoint, body \\ %{}, headers \\ %{}, options \\ []) do
-    make_request_with_key( method, endpoint, config_or_api_key(), body, headers, options )
+    make_request_with_key(method, endpoint, config_or_api_key(), body, headers, options)
   end
 
   defp require_openpay_merchant_id do
-    case Application.get_env(:ex_openpay, :merchant_id, System.get_env "OPENPAY_MERCHANT_ID") || :not_found do
+    case Application.get_env(:ex_openpay, :merchant_id, System.get_env("OPENPAY_MERCHANT_ID")) ||
+           :not_found do
       :not_found ->
         raise MissingSecretKeyError
-      value -> value
+
+      value ->
+        value
     end
   end
 
   defp require_openpay_api_key do
-    case Application.get_env(:ex_openpay, :api_key, System.get_env "OPENPAY_API_KEY") || :not_found do
+    case Application.get_env(:ex_openpay, :api_key, System.get_env("OPENPAY_API_KEY")) ||
+           :not_found do
       :not_found ->
         raise MissingApiKeyError
-      value -> value
+
+      value ->
+        value
     end
   end
 

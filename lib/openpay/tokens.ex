@@ -60,7 +60,7 @@ defmodule ExOpenpay.Tokens do
       {:ok, token} = ExOpenpay.Cards.get(:customer, customer_id, token_id)
   """
   def get(id) do
-    get id, ExOpenpay.config_or_env_key
+    get id, ExOpenpay.config_or_api_key
   end
 
   @doc """

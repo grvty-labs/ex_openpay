@@ -12,5 +12,9 @@ config :exvcr, [
       pattern: Application.get_env(:ex_openpay, :api_key, System.get_env("OPENPAY_API_KEY")),
       placeholder: "OPENPAY_API_KEY"
     ]
-  ]
+  ],
+  filter_request_headers: [
+    "Authorization"
+  ],
+  response_headers_blacklist: ["OpenPay-Request-ID", "Date", "Resource-ID"]
 ]
